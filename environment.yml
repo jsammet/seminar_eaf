@@ -1,0 +1,23 @@
+name: ad-ai-practical
+channels:
+  - conda-forge
+dependencies:
+  # Core — every module needs these.
+  - python=3.11
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - scipy
+  - jupyterlab
+  - ipywidgets          # optional checkboxes in the download notebook; everything works without it
+  - pip
+  - pip:
+      # Optional extras. Every notebook runs without them and says so where one would help.
+      #   torch      module A — the CNN. Without it, an equivalent dense network is trained instead.
+      #              CPU build only:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+      #   lifelines  module E — proper Cox proportional-hazards models with confidence intervals.
+      #              Without it, logistic-regression odds ratios are shown instead.
+      #   rdkit      module H — drawing molecules and computing true Murcko scaffolds.
+      #   shap       not needed. src/interpret.py computes EXACT Shapley values from the definition.
+      - lifelines

@@ -1,0 +1,11 @@
+# Downloaded source data — fetch it with notebooks/00_download_data.ipynb.
+# Not redistributed here: OASIS is covered by its own data-use terms, and the
+# GWAS Catalog download changes weekly.
+data/raw/
+
+# Derived teaching tables — rebuilt deterministically by src/prepare.py.
+data/derived/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
